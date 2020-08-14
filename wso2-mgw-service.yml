@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: wso2-mi
+  name: wso2-gw
 spec:
   type: ClusterIP
   selector:
-    deploymentconfig: wso2-mi
+    deploymentconfig: wso2-mgw
   ports:
   - name: carbon-port
-    port: 8290
-    targetPort: 8290
+    port: 9090
+    targetPort: 9090
     protocol: TCP
